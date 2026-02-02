@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR iMedia R093 Exam Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="progress-wrapper" class="hidden">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="header-info" class="hidden">
+            <div id="topic-display"></div>
+            <div id="timer-display"></div>
+            <div id="score-display">Score: 0</div>
+        </div>
+
+        <div id="main-menu" class="fade-in">
+            <h1>iMEDIA R093 EXAM TRAINER</h1>
+            <button id="full-test-btn" onclick="startSession('TEST')">START FULL TEST (25 RANDOM - TIMED)</button>
+            <div id="topic-grid"></div>
+        </div>
+
+        <div id="quiz-area" class="hidden">
+            <div id="canvas-container" class="hidden">
+                <canvas id="visual-canvas" width="450" height="250"></canvas>
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+            <div id="feedback-area"></div>
+            
+            <div id="nav-controls">
+                <button class="leave-btn" onclick="showMenu()">LEAVE TOPIC</button>
+                <button id="hint-btn" onclick="showHint()">NEED A HINT?</button>
+                <button id="continue-btn" class="hidden" onclick="nextQuestion()">CONTINUE</button>
+            </div>
+        </div>
+
+        <div id="results-area" class="hidden">
+            <h1>SESSION COMPLETE</h1>
+            <p id="final-score-text" style="font-size: 2rem;"></p>
+            <button class="full-test-btn" onclick="showMenu()">RETURN TO MAIN MENU</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
